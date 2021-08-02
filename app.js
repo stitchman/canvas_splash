@@ -15,6 +15,14 @@ class App {
 
     document.addEventListener("click", (e) => {
       this.splashes.push(new Splash(e.clientX, e.clientY, 10, 10, 20));
+
+      const wrapper = document.querySelector("#wrapper");
+      wrapper.style.height = "3rem";
+
+      const description = document.querySelector("#description");
+      if (!description.classList.contains("hidden")) {
+        description.classList.add("hidden");
+      }
     });
 
     this.splashes.push(
